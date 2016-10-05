@@ -44,3 +44,22 @@ int main()
     printf("El numero mayor es: %d",mayor);
 }
 */
+/*
+
+//imprime el menor de un arreglo
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int arreglo[10]={3,5,6,1,8,4,2,7,5,9};
+    int menor=0,i;
+    for (i=0;i<10;i++)
+    {
+        if (arreglo[i]<arreglo[menor])
+            menor=i;
+    }
+    printf("El arreglo mayor es: %d",arreglo[menor]);
+}
+*/
