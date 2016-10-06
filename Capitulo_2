@@ -1,0 +1,20 @@
+/*
+//strlen
+
+#include <stdio.h>
+
+
+strlen(char c[])
+{
+    int cont=0;
+    while(c[cont]!='\0')
+        cont++;
+    return cont;
+}
+
+int main()
+{
+    char lista[]="introduceunalistaaqui";
+    printf("%d",strlen(lista));
+}
+*/
