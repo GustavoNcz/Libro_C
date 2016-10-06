@@ -94,5 +94,43 @@ int main()
     }
 }
 */
+/*
 
+//imprime un programa que imprima el histograma de la cantidad de veces que aparece un caracter
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int arreglo[26];
+    int i,j,cont=0;
+    char c;
+    for(i=0;i<27;i++)
+    {
+        arreglo[i]=0;
+    }
+
+    while((c=getchar())!=EOF)
+    {
+        arreglo[c-'a']++;
+    }
+
+    printf("A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \n");
+    for(i=0;i<26;i++)
+    {
+        printf("%d ",arreglo[i]);
+    }
+    printf("\n");
+    for (i=0;i<26;i++)
+    {
+        for (j=0;j<arreglo[i];j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+}
+*/
 
