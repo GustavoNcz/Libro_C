@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -51,3 +52,65 @@ main()
     }
     prev -> nex = NULL;
 }
+*/
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int val;
+    struct node *next;
+};
+
+main()
+{
+    struct node *head, *middle,*tail;
+    /*head = malloc (sizeof(struct node));
+    middle = malloc (sizeof (struct node));
+    tail = malloc (sizeof (struct node));
+    head -> val = 1;
+    middle -> val =2;
+    tail -> val = 3;
+    head -> next = middle;
+    middle -> next = tail;
+    tail -> next = NULL;*/
+
+/*
+    struct node *t;
+    t=head;
+    printf ("%d", t->val);
+    t=t->next;
+    printf("%d",t->val);
+    t=t->next;
+    printf("%d",t->val);
+*/
+
+    struct node *t;
+
+
+    struct node *prev, *cur;
+
+    //creating a linked list
+    head = malloc (sizeof(struct node));
+    head -> val = 1;
+    prev = head;
+    int n=6,i;
+    for (i=2;i<= n ; i++)
+    {
+        cur = malloc (sizeof (struct node));
+        cur -> val = i;
+        prev -> next = cur;
+        prev = cur;
+    }
+    prev -> next = NULL;
+
+    t=head;
+    while (t!=NULL)
+    {
+        printf("%d",t->val);
+        t=t->next;
+    }
+}
+/*
