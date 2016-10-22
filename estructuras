@@ -1,0 +1,108 @@
+/*
+# include <stdio.h>
+# include <string.h>
+
+struct video
+{
+    char titulo[40];
+    int visitas;
+    int tiempo;
+
+};
+
+typedef struct video vid;
+
+vid crear_video()
+{
+    vid nuevo;
+    printf("Ingrese el nombre del video: ");
+    fflush(stdin);
+    gets(nuevo.titulo);
+    printf("Ingrese la cantidad de visitas: ");
+    fflush(stdin);
+    scanf("%d",&nuevo.visitas);
+    printf("Ingrese la duracion del video: ");
+    fflush(stdin);
+    scanf("%d",&nuevo.tiempo);
+    return nuevo;
+}
+
+void imprimir(vid video)
+{
+    printf("%s , tiempo: %d , visitas: %d \n",video.titulo,video.tiempo,video.visitas);
+}
+
+int main()
+{
+    vid video1=crear_video();
+    vid video2=crear_video();
+    vid video3=crear_video();
+    imprimir(video1);
+    imprimir(video2);
+    imprimir(video3);
+}
+*/
+
+// estructura destro de otra estructura
+
+/*
+# include <stdio.h>
+# include <string.h>
+
+struct fecha
+{
+    int dia,mes,anio;
+};
+
+typedef struct fecha fecha_x;
+
+struct contacto
+{
+    char nombre[80];
+    long telefono;
+    fecha_x fecha_nacimiento;
+};
+
+typedef struct contacto contacto_x;
+
+fecha_x crear_fecha()
+{
+    fecha_x nueva_fecha;
+    printf("Ingrese una dia: ");
+    fflush(stdin);
+    scanf("%d",&nueva_fecha.dia);
+    printf("Ingrese un mes: ");
+    fflush(stdin);
+    scanf("%d",&nueva_fecha.mes);
+    printf("Ingrese un anio: ");
+    fflush(stdin);
+    scanf("%d",&nueva_fecha.anio);
+    return nueva_fecha;
+}
+
+contacto_x crear_contacto()
+{
+    contacto_x nuevo_contacto;
+    printf("Ingrese un numbre: ");
+    fflush(stdin);
+    gets(nuevo_contacto.nombre);
+    printf("Ingrese el telefono: ");
+    fflush(stdin);
+    scanf("%d",&nuevo_contacto.telefono);
+    nuevo_contacto.fecha_nacimiento = crear_fecha();
+    return nuevo_contacto;
+}
+
+void imprimir_c(contacto_x cnt)
+{
+    printf("Nombre: %s \nTelefono: %d \n",cnt.nombre,cnt.telefono);
+    printf("Fecha de Nacimiento: %d-%d-%d",cnt.fecha_nacimiento.dia,cnt.fecha_nacimiento.mes,cnt.fecha_nacimiento.anio);
+}
+
+int main()
+{
+    contacto_x contacto1;
+    contacto1=crear_contacto();
+    imprimir_c(contacto1);
+}
+*/
